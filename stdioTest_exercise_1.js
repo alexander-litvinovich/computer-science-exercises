@@ -1,3 +1,9 @@
+/**
+ *  Environment setup for reading STDIN
+ *  and writing to STDOUT (via console.log, 
+ *  seems to be it matters for fintech.tinkoff.ru)
+ */
+
 const readline = require('readline');
 const rl = readline.createInterface({
     input: process.stdin,
@@ -19,7 +25,8 @@ rl.on('line', (input)=>{
 });
 
 const main = function(){
-    rl.write(`${arg.a+arg.b}`);
+    let result = arg.a+arg.b;
+    console.log(result);
     process.exit(0);   
 }
 
