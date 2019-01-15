@@ -2,6 +2,13 @@
  *  Environment setup for reading STDIN
  *  and writing to STDOUT (via console.log, 
  *  seems to be it matters for fintech.tinkoff.ru)
+ * 
+ *  By the way, end of transmition (EOT character)
+ *  is symbol that can be entered from keyboard —
+ *  Ctrl+D
+ * 
+ *  And if you have test data and valid answers
+ *  you have to test your app before sending it.
  */
 
 const readline = require('readline');
@@ -16,7 +23,7 @@ const inputArray = [];
 
 rl.on('line', (input)=>{
     if(!isNaN(parseInt(input))) inputArray.push(parseInt(input));
-    if(inputArray.length == maxInputValues || !input) rl.close();
+    if(inputArray.length == maxInputValues) rl.close();
 });
 
 const main = function(){
