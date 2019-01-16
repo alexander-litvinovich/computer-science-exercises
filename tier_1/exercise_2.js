@@ -27,6 +27,8 @@ const rl = readline.createInterface({
 });
 
 evaluteByHands = function(expression){
+    // I don't want to write unique expression evaluator for each operation. so I make universal
+
     let operator = expression.match(/([\*/+-])/g).pop(); // using last operator because double operators not allowed
     let operatorPos = expression.match(/-?\d+(\.\d+)?([\*/+-])/)[0].length-1;
     
