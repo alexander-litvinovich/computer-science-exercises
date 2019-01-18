@@ -53,8 +53,8 @@ function findAttackZone(board){
 
 function countSafeSquare(board){
     result = 0;
-    for(let y = 0; y < 8; y++){      
-        for(let x = 0; x < 8; x++){
+    for(let y = 0; y < board.length; y++){      
+        for(let x = 0; x < board.length; x++){
             if (board[y][x] === '*') result++;
         }
     }
